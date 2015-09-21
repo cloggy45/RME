@@ -1,0 +1,59 @@
+<template name="createOrderForm">
+    <form class="form-horizontal">
+        <fieldset>
+            <div class="form-group">
+                <label for="selectLocation" class="col-md-4 control-label">Location</label>
+                <div class="col-md-4">
+                    <select name="selectLocation" class="form-control">
+                        <option value="Watergate">Watergate</option>
+                        <option value="Nova">Nova</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="selectCommodity" class="col-md-4 control-label">Commodity</label>
+                <div class="col-md-4">
+                    <select id="selectCommodity" name="selectCommodity" class="form-control">
+                        {{#each items}}
+                            <option value="{{item}}">{{item}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="selectOrderType" class="col-md-4 control-label">Order Type</label>
+                <div class="col-md-4">
+                    <select id="selectOrderType" name="selectOrderType" class="form-control">
+                        <option value="1">Buy</option>
+                        <option value="2">Sell</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+                <label for="quantityInput" class="col-md-4 control-label">Quantity</label>
+                <div class="col-md-4">
+                    <input id="quantityInput" name="quantityInput" placeholder="Quantity" required="" type="number" min="1" max="2000" class="form-control input-md"/>
+                </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+                <label for="priceInput" class="col-md-4 control-label">Price (HQM)</label>
+                <div class="col-md-4">
+                    <input id="priceInput" name="priceInput" placeholder="Price" required="" type="number" min="1" max="10000" class="form-control input-md"/>
+                </div>
+            </div>
+            <!-- Button-->
+            <div class="form-group">
+                <label for="orderBtn" class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                    {{#if canCreateOrder}}
+                        <button data-order-type="sell" name="orderBtn" class="btn btn-primary">Create Order</button>
+                    {{else}}
+                        <button data-order-type="sell" disabled="disabled" name="orderBtn" class="btn btn-disabled">Create Order</button>
+                    {{/if}}
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</template>

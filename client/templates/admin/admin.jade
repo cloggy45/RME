@@ -1,0 +1,17 @@
+template(name='admin')
+    .row
+        .col-md-12
+            .page-header
+                h1 Admin Settings
+            +userTable
+    .row
+        .col-md-12
+            .row
+                .page-header
+                    h4 Misc Settings
+        .col-md-12
+            .row
+                .col-md-6
+                    +miscSettings
+                .col-md-6
+                    +townsList

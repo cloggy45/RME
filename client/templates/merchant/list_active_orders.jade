@@ -1,0 +1,11 @@
+template(name='active')
+    .row
+        .col-md-12
+            .page-header
+                if canCreateOrder
+                    h2
+                        | Active Orders - <small>#{activeOrdersTotal}/#{maxOrders} Orders remaining.</small>
+                else
+                    h2
+                        | Active Orders <small><b>#{activeOrdersTotal}/#{maxOrders}</b> You must first delete orders before you can add anymore.</small>
+            +activeOrderTable

@@ -1,0 +1,34 @@
+template(name='loggedIn')
+    .navbar.navbar-default.navbar-fixed-top
+        .container
+            .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='#') Rustifaq Merchant Exchange <small>(Alpha)</small>
+            .collapse.navbar-collapse
+                ul.nav.navbar-nav.navbar-right
+                    li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown')
+                            | Menu
+                            strong.caret
+                        ul.dropdown-menu
+                            li
+                                if canCreateOrder
+                                    a(href='#')#createOrder Create Order
+                            li
+                                a(href='/active' data-order-type='3')#activeOrders Active Orders
+                            li.divider
+                            li
+                                a(href='/buy' data-order-type='1')#buyOrders Buy Orders
+                            li
+                                a(href='/sell' data-order-type='2')#sellOrders Sell Orders
+                            li.divider
+                            if isAdmin
+                                li
+                                    a(href='/admin') Admin Settings
+                            li
+                                a(href='/settings') Settings
+                            li#logout
+                                a(href='/logout') Sign out

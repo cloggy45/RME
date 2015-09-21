@@ -1,0 +1,42 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+insecure
+mquandalle:jade
+twbs:bootstrap
+accounts-password
+accounts-facebook
+service-configuration
+http
+email
+audit-argument-checks
+themeteorchef:bert
+browser-policy
+check
+iron:router
+jquery
+themeteorchef:jquery-validation
+meteorhacks:npm
+
+
+npm-container
+fourseven:scss
+accounts-oauth
+meteorhacks:ssr
+accounts-ui
+aldeed:template-extension
+reactive-var
+mizzao:bootboxjs
+momentjs:moment
+aldeed:collection2
+aldeed:simple-schema
+copleykj:mesosphere
+msavin:mongol
+gwendall:auth-client-callbacks
+aslagle:reactive-table
+accounts-base
+mrt:accounts-steam
