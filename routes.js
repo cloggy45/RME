@@ -7,9 +7,7 @@ var beforeHooks = {
       }
    },
    isAdmin : function (pause) {
-      console.log(Meteor.user());
-      if(Meteor.user().profile.isAdmin == true || Meteor.user().services.steam.id == Meteor) {
-         console.log("Going to Admin Panel")
+      if(Meteor.user().profile.isAdmin == true) {
          this.next();
       } else {
          this.render('active');

@@ -17,7 +17,7 @@ TownList.allow({
         return (userId && doc.owner === userId);
     },
     remove : function () {
-        return Meteor.user().profile.isAdmin || Meteor.user().services.steam.id == '76561198013614174';
+        return Meteor.user().profile.isAdmin;
     },
     fetch : ['owner']
 });
