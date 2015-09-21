@@ -1,32 +1,13 @@
-<!--<template name="townsList">-->
-    <!--<table class="table">-->
-        <!--<thead>-->
-            <!--<tr>-->
-                <!--<th>Town Name</th>-->
-                <!--<th>Coordinates</th>-->
-            <!--</tr>-->
-        <!--</thead>-->
-        <!--<tbody>-->
-            <!--{{#each towns}}-->
-                <!--<td>{{name}}</td>-->
-                <!--<td>{{coordinates}}</td>-->
-            <!--{{else}}-->
-                <!--<td>No Towns have been added</td>-->
-            <!--{{/each}}-->
-        <!--</tbody>-->
-    <!--</table>-->
-<!--</template>-->
-
 <template name="townsList">
-    <ul class="list-group">
-        {{#each towns}}
-            <li class="list-group-item">
-                {{name}}
-                {{coordinates}}
-                <button data-id="{{_id}}" class="btn btn-primary ">Delete</button>
-            </li>
-        {{else}}
-            <li>No Towns have been added</li>
-        {{/each}}
-    </ul>
+    <form class="form-inline">
+        <label>Available Towns:</label>
+        <div class="form-group">
+            <select name="selectTown" class="form-control">
+                {{#each towns}}
+                    <option value="{{_id}}">{{name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-default">Delete</button>
+    </form>
 </template>

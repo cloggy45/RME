@@ -1,1 +1,3 @@
 /server/adminSupport/*
+.meteor/local
+.meteor/meteorite

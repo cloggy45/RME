@@ -5,8 +5,9 @@
                 <label for="selectLocation" class="col-md-4 control-label">Location</label>
                 <div class="col-md-4">
                     <select name="selectLocation" class="form-control">
-                        <option value="Watergate">Watergate</option>
-                        <option value="Nova">Nova</option>
+                        {{# each towns}}
+                        <option value="{{name}}">{{name}}</option>
+                        {{/each}}
                     </select>
                 </div>
             </div>
