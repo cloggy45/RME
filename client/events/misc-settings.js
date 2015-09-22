@@ -5,7 +5,7 @@ Template.miscSettings.events({
             name : event.target.inputTownName.value
         };
 
-        Meteor.call('addTown', town);
+        Meteor.call('add','Towns', town);
         template.find("form").reset();
     }
 });

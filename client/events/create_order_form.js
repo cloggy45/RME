@@ -13,8 +13,7 @@ Template.createOrderForm.events({
             createdBy : Meteor.userId()
         };
 
-
-        Meteor.call('addOrder', order);
+        Meteor.call('add', "Orders", order);
         // Resets the form
         template.find("form").reset();
 

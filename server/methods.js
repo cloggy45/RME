@@ -1,23 +1,39 @@
 Meteor.methods({
-    'addOrder': function (order) {
-        OrderList.insert(order);
-        check(order, Object);
-    },
-    'deleteOrder': function (id) {
+    'remove' : function (collectionName, id) {
+        check(collectionName, Match.Any);
         check(id, Match.Any);
-        OrderList.remove({_id: id});
+        switch (collectionName) {
+            case "Order":
+                OrderList.remove(id);
+                break;
+            case "Faction":
+                FactionList.remove(id);
+                break;
+            case "Town":
+                TownList.remove(id);
+                break;
+            default:
+                Meteor.Error("Unable to remove document from collection..");
+                break;
+        }
     },
-    'addTown' : function (town) {
-        console.log(town);
-        check(town, Object);
-        TownList.insert(town);
-    },
-    'deleteTown' : function (id) {
-        check(id, Match.Any);
-        TownList.remove({_id: id});
-    },
-    'addFaction' : function (faction) {
-        check(faction, Match.Any);
-        FactionList.insert(faction);
+    'add' : function (collectionName, document) {
+        check(collectionName, Match.Any);
+        check(document, Match.Any);
+
+        switch (collectionName) {
+            case "Orders":
+                OrderList.insert(document);
+                break;
+            case "Factions":
+                FactionList.insert(document);
+                break;
+            case "Towns":
+                TownList.insert(document);
+                break;
+            default:
+                Meteor.Error("Unable to add document to collection..");
+                break;
+        }
     }
 });
