@@ -1,7 +1,6 @@
 Template.ordersTable.helpers({
     orders : function () {
         var orderType = Session.get('currentOrderTemplate');
-        //if order type == 2 then the active tab has been selected.
 
         if(orderType == 3) {
             return OrderList.find({createdBy : Meteor.userId()}).fetch();
@@ -20,6 +19,7 @@ Template.ordersTable.helpers({
                     return parseInt(price);
                 }},
                 {key: 'merchant', label: 'Merchant'},
+                {key: 'faction', label: 'Faction'},
                 {key: 'location', label: 'Location'},
                 {key: 'createdAt', label: 'Order Created', fn: function(date) {
                     return moment(date).fromNow();

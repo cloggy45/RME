@@ -4,8 +4,8 @@ template(name='active')
             .page-header
                 if canCreateOrder
                     h2
-                        | Active Orders - <small>#{activeOrdersTotal}/#{maxOrders} Orders remaining.</small>
+                        | My Orders - <small>#{activeOrdersTotal}/#{maxOrders} Orders remaining.</small>
                 else
                     h2
-                        | Active Orders <small><b>#{activeOrdersTotal}/#{maxOrders}</b> You must first delete orders before you can add anymore.</small>
+                        | My Orders <small><b>#{activeOrdersTotal}/#{maxOrders}</b> You must first delete orders before you can add anymore.</small>
             +activeOrderTable

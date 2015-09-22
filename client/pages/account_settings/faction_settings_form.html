@@ -1,0 +1,13 @@
+<template name="userFactionSettings">
+    <form class="form-inline">
+        <label>Current Faction:</label>
+        <div class="form-group">
+            <select name="selectFaction" class="form-control">
+                {{#each factions}}
+                    <option value="{{name}} [{{tag}}]">{{name}} [{{tag}}]</option>
+                {{/each}}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-default">Save Changes</button>
+    </form>
+</template>

@@ -1,6 +1,9 @@
 template(name="factionSettingsForm")
     form.form-inline
-        label Add Faction
-        form-group
+        .form-group
+            label.control-label Faction Name
             input(type="text" placeholder="Faction Name" name="inputFactionName" required).form-control
+        .form-group
+            label.control-label Faction Tag
+            input(type="text" placeholder="Faction Tag" name="inputFactionTag" required).form-control
         button(type="submit").btn.btn-default Add Faction

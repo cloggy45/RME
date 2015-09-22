@@ -8,6 +8,7 @@ Template.createOrderForm.events({
             quantity : event.target.quantityInput.value,
             price : event.target.priceInput.value,
             merchant : user.profile.name,
+            faction : user.profile.faction,
             location : event.target.selectLocation.value,
             createdAt : new Date(),
             createdBy : Meteor.userId()

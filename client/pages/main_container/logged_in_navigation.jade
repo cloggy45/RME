@@ -18,9 +18,9 @@ template(name='loggedIn')
                             li
                                 if canCreateOrder
                                     a(href='#')#createOrder Create Order
-                            li
-                                a(href='/active' data-order-type='3')#activeOrders Active Orders
                             li.divider
+                            li
+                                a(href='/active' data-order-type='3')#activeOrders My Orders
                             li
                                 a(href='/buy' data-order-type='1')#buyOrders Buy Orders
                             li
@@ -29,7 +29,8 @@ template(name='loggedIn')
                             if isAdmin
                                 li
                                     a(href='/admin') Admin Settings
+                            li.divider
                             li
-                                a(href='/settings') Settings
+                                a(href='/settings') Account Settings
                             li#logout
                                 a(href='/logout') Sign out

@@ -15,7 +15,7 @@ var beforeHooks = {
    }
 };
 
-Router.before(beforeHooks.isLoggedIn, {only: ['buy','sell','active']});
+Router.before(beforeHooks.isLoggedIn, {only: ['buy','sell','active','settings']});
 Router.before(beforeHooks.isAdmin, {only: ['admin']});
 
 Router.route('/', function() {
@@ -39,4 +39,7 @@ Router.route('/logout', function() {
    this.render('front');
 });
 
+Router.route('/settings', function() {
+   this.render('accountSettings');
+})
 
