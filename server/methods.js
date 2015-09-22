@@ -15,5 +15,9 @@ Meteor.methods({
     'deleteTown' : function (id) {
         check(id, Match.Any);
         TownList.remove({_id: id});
+    },
+    'addFaction' : function (faction) {
+        check(faction, Match.Any);
+        FactionList.insert(faction);
     }
 });

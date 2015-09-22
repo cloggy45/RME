@@ -6,5 +6,6 @@ Template.miscSettings.events({
         };
 
         Meteor.call('addTown', town);
+        template.find("form").reset();
     }
 });

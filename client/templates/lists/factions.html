@@ -1,0 +1,13 @@
+<template name="factionsList">
+    <form class="form-inline">
+        <label>Current Factions:</label>
+        <div class="form-group">
+            <select name="selectFactions" class="form-control">
+                {{#each factions}}
+                    <option value="{{_id}}">{{name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-default">Delete</button>
+    </form>
+</template>

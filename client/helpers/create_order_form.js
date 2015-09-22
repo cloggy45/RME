@@ -1,5 +1,3 @@
-Meteor.subscribe('items');
-
 Template.createOrderForm.helpers({
     items : function () {
         return RustItems.find().fetch();

@@ -22,6 +22,18 @@ TownList.allow({
     fetch : ['owner']
 });
 
+FactionList = new Mongo.Collection('factions');
+
+FactionList.allow({
+    insert : function (userId, doc) {
+        return (userId && doc.owner === userId);
+    },
+    remove : function () {
+        return Meteor.user().profile.isAdmin;
+    },
+    fetch : ['owner']
+});
+
 Meteor.users.allow({
    update : function () {
        return Meteor.user().profile.isAdmin;

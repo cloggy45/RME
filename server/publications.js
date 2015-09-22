@@ -10,6 +10,10 @@ Meteor.publish('towns', function() {
     return TownList.find();
 });
 
+Meteor.publish('factions', function() {
+   return FactionList.find();
+});
+
 Meteor.publish('items', function() {
    return RustItems.find();
 });
