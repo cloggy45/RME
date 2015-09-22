@@ -31,6 +31,7 @@ ejson@1.0.6
 email@1.0.6
 facebook@1.2.1
 fastclick@1.0.3
+fortawesome:fontawesome@4.4.0
 fourseven:scss@3.2.0
 geojson-utils@1.0.3
 gwendall:auth-client-callbacks@0.1.0

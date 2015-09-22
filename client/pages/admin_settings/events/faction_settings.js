@@ -4,7 +4,6 @@ Template.factionSettingsForm.events({
         var faction = {
             name : event.target.inputFactionName.value
         };
-
         Meteor.call('add','Factions', faction);
         template.find("form").reset();
     }

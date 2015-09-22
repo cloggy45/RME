@@ -10,8 +10,9 @@ template(name='loggedIn')
             .collapse.navbar-collapse
                 ul.nav.navbar-nav.navbar-right
                     li.dropdown
+
                         a.dropdown-toggle(href='#', data-toggle='dropdown')
-                            | Menu
+                            | Welcome #{ username }
                             strong.caret
                         ul.dropdown-menu
                             li

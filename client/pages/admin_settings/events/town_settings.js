@@ -1,4 +1,4 @@
-Template.miscSettings.events({
+Template.townSettingsForm.events({
     'submit form' : function (event, template) {
         event.preventDefault();
         var town = {
