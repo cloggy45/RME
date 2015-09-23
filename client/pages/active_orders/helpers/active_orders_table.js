@@ -22,7 +22,7 @@ Template.activeOrderTable.helpers({
                     return moment(date).fromNow();
                 }},
                 {key: '_id', label: '', fn: function (id) {
-                    var buttonString = '<button type="button" class="btn btn-danger btn-xs" data-id="'+ id +'"><span class="glyphicon glyphicon-remove-sign"></span></button></td>';
+                    var buttonString = '<button type="button" class="btn btn-danger btn-xs" data-id="'+ id +'">Delete</button></td>';
                     return new Spacebars.SafeString(buttonString);
                 }}
             ],

@@ -9,6 +9,12 @@ Template.userTable.events({
             'profile.isAdmin' : booleanValue
         };
 
-        Meteor.users.update({_id: selectedUser}, {$set: profileUpdate});
+        Meteor.users.update({_id: selectedUser}, {$set: profileUpdate}, function (error) {
+            if(error) {
+                sAlert.error(error,{effect:'scale', timeout:2000});
+            } else {
+                sAlert.success('User updated successfully!',{effect:'scale', timeout:2000});
+            }
+        });
     }
 });

@@ -34,6 +34,7 @@ fastclick@1.0.3
 fortawesome:fontawesome@4.4.0
 fourseven:scss@3.2.0
 geojson-utils@1.0.3
+gfk:notifications@1.1.3
 gwendall:auth-client-callbacks@0.1.0
 gwendall:session-json@0.1.7
 html-tools@1.0.4
@@ -51,6 +52,10 @@ iron:router@1.0.9
 iron:url@1.0.9
 jquery@1.11.3_2
 json@1.0.3
+juliancwirko:s-alert@3.1.0
+juliancwirko:s-alert-flip@3.1.0
+juliancwirko:s-alert-scale@3.1.0
+juliancwirko:s-alert-slide@3.1.0
 lai:collection-extensions@0.1.4
 launch-screen@1.0.2
 less@1.0.14

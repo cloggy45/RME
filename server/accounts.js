@@ -1,6 +1,6 @@
 Accounts.onCreateUser(function(options, user) {
     options.profile.maxPosts = "10";
-    options.profile.faction = 'Indy';
+    options.profile.faction = 'none';
 
     if(options.profile)
         user.profile = options.profile;

@@ -602,6 +602,8 @@ var items = [
     }
 ];
 
+
+
 if(RustItems.find({}).count() <= 1) {
     console.log("Inserting items into rustItems collection");
 

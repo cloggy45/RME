@@ -14,7 +14,13 @@ Template.createOrderForm.events({
             createdBy : Meteor.userId()
         };
 
-        Meteor.call('add', "Orders", order);
+        Meteor.call('add', "Orders", order, function(error) {
+            if(error) {
+                sAlert.error(error,{effect:'scale', timeout:5000});
+            } else {
+                sAlert.success('Order Added',{effect:'scale', timeout:2000});
+            }
+        });
         // Resets the form
         template.find("form").reset();
 
