@@ -1,8 +1,9 @@
 <template name="userFactionSettings">
     <form class="form-inline">
-        <label>Current Faction:</label>
+        <label>Select Faction:</label>
         <div class="form-group">
             <select name="selectFaction" class="form-control">
+                    <option>Select Faction</option>
                 {{#each factions}}
                     <option value="{{name}} [{{tag}}]">{{name}} [{{tag}}]</option>
                 {{/each}}

@@ -7,5 +7,5 @@ template(name='active')
                         | My Orders - <small>#{activeOrdersTotal}/#{maxOrders} Orders remaining.</small>
                 else
                     h2
-                        | My Orders <small><b>#{activeOrdersTotal}/#{maxOrders}</b> You must first delete orders before you can add anymore.</small>
+                        | My Orders <small><b>#{activeOrdersTotal}/#{maxOrders}</b> You must first delete orders before you can add more.</small>
             +activeOrderTable
